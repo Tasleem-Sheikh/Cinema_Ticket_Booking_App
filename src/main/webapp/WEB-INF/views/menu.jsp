@@ -8,8 +8,11 @@
 </head>
 <body>
 <a href="book" >New Booking</a>
-<a href="delete" >Delete Booking</a>
 <a href="all_bookings" >ALL Bookings</a>
 <a href="update" > Update Booking</a>
+<form action="logout" method="post"> 
+<input type="submit" value="LOGOUT" />
+
+</form>
 </body>
 </html>
