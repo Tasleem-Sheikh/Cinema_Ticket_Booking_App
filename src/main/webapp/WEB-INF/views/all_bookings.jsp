@@ -17,7 +17,8 @@
 			<th>Language</th>
 			<th>Seat_Row</th>
 			<th>Seat_Number</th>
-					<th>Update</th>
+			<th>Update</th>
+			<th>Update</th>
 		</tr>
 		<%
 		ResultSet rs = (ResultSet) request.getAttribute("results");
@@ -62,21 +63,31 @@
 			</td>
 			<td><a
 				href="update?email=<%out.println(rs.getString(2));%>&movie=<%out.println(rs.getString(4));%>&language=<%out.println(rs.getString(5));%>&seat_row=<%out.println(rs.getString(6));%>&seat_number=<%out.println(rs.getString(7));%>&u_email=<%out.println(rs.getString(2));%>">UPDATE</a></td>
-
+			<td><a href="delete?email=<%out.println(rs.getString(2));%>">Cancel
+					Booking</a></td>
 		</tr>
+
 
 
 		<%
 		}
 		%>
-		
-		<div style="color:green">
-		<% if(request.getAttribute("update_msg")!=null){
-		out.println(request.getAttribute("update_msg"));
-			
-			}%>
-			</div>
-		
+
+		<div style="color: green">
+			<%
+			if (request.getAttribute("update_msg") != null) {
+				out.println(request.getAttribute("update_msg"));
+
+			}
+			%>
+			<%
+			if (request.getAttribute("cancelled") != null) {
+				out.println(request.getAttribute("cancelled"));
+
+			}
+			%>
+		</div>
+
 
 	</table>
 </body>
