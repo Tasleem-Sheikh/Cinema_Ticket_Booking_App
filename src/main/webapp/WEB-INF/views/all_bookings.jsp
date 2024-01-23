@@ -73,7 +73,11 @@
 		}
 		%>
 
-		<div style="color: green">
+		
+
+
+	</table>
+	<div style="color: green">
 			<%
 			if (request.getAttribute("update_msg") != null) {
 				out.println(request.getAttribute("update_msg"));
@@ -87,8 +91,5 @@
 			}
 			%>
 		</div>
-
-
-	</table>
 </body>
 </html>
